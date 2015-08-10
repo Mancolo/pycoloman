@@ -23,6 +23,9 @@ class Customer(models.Model):
   last_modified = models.DateTimeField(auto_now=True)
   history = HistoricalRecords() 
 
+  def __str__(self):
+    return self.name
+
 class CustomerKind(models.Model):
   """
   Table for categorizing customers, can only belong to one category at a time.
@@ -33,6 +36,9 @@ class CustomerKind(models.Model):
   label = models.CharField(max_length=20, blank=False)
   desc = models.CharField(max_length=100, blank=True)
   history = HistoricalRecords() 
+
+  def __str__(self):
+    return self.label
 
 class Contact(models.Model):
   first_name = models.CharField(max_length=20)
@@ -48,3 +54,6 @@ class Contact(models.Model):
   notes = models.TextField(blank=True)
   last_modified = models.DateTimeField(auto_now=True)
   history = HistoricalRecords()
+
+  def __str__(self):
+    return '%s %s' % (self.first_name, self.last_name)
