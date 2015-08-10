@@ -33,3 +33,18 @@ class CustomerKind(models.Model):
   label = models.CharField(max_length=20, blank=False)
   desc = models.CharField(max_length=100, blank=True)
   history = HistoricalRecords() 
+
+class Contact(models.Model):
+  first_name = models.CharField(max_length=20)
+  middle_name = models.CharField(max_length=20, blank=True)
+  last_name = models.CharField(max_length=20)
+  company = models.ForeignKey(Customer)
+  role = models.CharField(max_length=10)
+  phone = models.CharField(max_length=25, blank=True)
+  phone_second = models.CharField(max_length=25, blank=True)
+  email = models.EmailField(blank=True)
+  access_phone = models.BooleanField(default=False)
+  access_phys = models.BooleanField(default=False)
+  notes = models.TextField(blank=True)
+  last_modified = models.DateTimeField(auto_now=True)
+  history = HistoricalRecords()
