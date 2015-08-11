@@ -28,6 +28,14 @@ After you've activated, you'll be reminded by your prompt changing:
 (pycoloman)you@somemachine ~/pycoloman
 ```
 
+Clone the repo
+
+```
+git clone https://github.com/Mancolo/pycoloman.git
+cd pycoloman
+```
+
+
 Install the requirements
 ````
 pip install -r ./requirements.txt
@@ -48,4 +56,4 @@ Run the dev server:
 python manage.py runserver 0.0.0.0:8000
 ```
 
-Then go to http://<yourip>:8000/admin/ and login with your superuser account to view the admin interface
+Then go to http://yourip:8000/admin/ and login with your superuser account to view the admin interface
