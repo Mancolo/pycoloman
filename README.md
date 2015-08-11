@@ -33,4 +33,19 @@ Install the requirements
 pip install -r ./requirements.txt
 ```
 
+From the pcm directory, run the db migrations:
+```
+python manage.py migrate
+```
 
+Create a superuser to login with:
+```
+python manage.py createsuperuser
+```
+
+Run the dev server:
+```
+python manage.py runserver 0.0.0.0:8000
+```
+
+Then go to http://<yourip>:8000/admin/ and login with your superuser account to view the admin interface
