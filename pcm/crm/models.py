@@ -2,6 +2,10 @@
 CRM Models.
 """
 from django.db import models
+from django.contrib.contenttypes import generic
+from django.contrib.contenttypes.models import ContentType
+
+
 
 from simple_history.models import HistoricalRecords
 
@@ -72,24 +76,46 @@ class Room(models.Model):
   A discrete usually access controlled area of floorspace in the datacenter.
   """
   name = models.CharField(max_length=100)
+  rack_pos = generic.GenericRelation('RackPosition')
+
+  def __str__(self):
+    return '%s' % self.name
 
 class Cage(models.Model):
   """
   A sepearate area of a room under another layer of access control.
   """
   name = models.CharField(max_length=100)
+  room = models.OneToOneField('Room')
+  rack_pos = generic.GenericRelation('RackPosition')
+
+  def __str__(self):
+    return '%s' % self.name
 
 class Rack(models.Model):
   """
   A physically installed rack frame.
   """
+  label = models.CharField(max_length=100,blank=True)
   u_height = models.IntegerField(default=42)
-  pos_x = models.IntegerField(blank=True)
-  pos_y = models.IntegerField(blank=True)
+
+  def __str__(self):
+    return '%s' % self.label
+
 
 class RackPosition(models.Model):
   """
   A mapped space on a datacenter floor that can hold a rack.
   """
-  room = models.ForeignKey(Room)
-  rack = models.ForeignKey(Rack)
+  rack = models.OneToOneField('Rack', blank=True, null=True)
+  pos_x = models.IntegerField(blank=True)
+  pos_y = models.IntegerField(blank=True)
+  content_type = models.ForeignKey(ContentType)
+  object_id = models.PositiveIntegerField()
+  content_object = generic.GenericForeignKey("content_type", "object_id")
+
+  class Meta:
+    unique_together = ('content_type', 'object_id')
+
+  def __str__(self):
+    return '%s:(%d,%d)' % (self.content_object.name, self.pos_x, self.pos_y)

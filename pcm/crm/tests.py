@@ -6,13 +6,14 @@ from .models import Customer, Contact
 class ContactTests(TestCase):
   def setUp(self):
     Customer.objects.create(name='Sample Customer')
+    self.company = Customer.objects.get(name='Sample Customer')
 
   def test_name(self):
     """
     last name should be last
     """
-    company = Customer.objects.get(name='Sample Customer')
-    new_contact = Contact(first_name='Bob', last_name='Sample', company=company)
-    self.assertEqual(new_contact.last_name, 'Sample')
+    Contact.objects.create(first_name='Bob', last_name='Sample', company=self.company)
+    retrieved_contact = Contact.objects.get(first_name='Bob', last_name='Sample')
+    self.assertEqual(retrieved_contact.last_name, 'Sample')
 
 
