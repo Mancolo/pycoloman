@@ -46,6 +46,11 @@ From the pcm directory, run the db migrations:
 python manage.py migrate
 ```
 
+Optional: Load up the sample database fixture. (Includes superuser admin with password admin)
+```
+python manage.py loaddata ./crm/fixtures/sample_db.yaml
+```
+
 Create a superuser to login with:
 ```
 python manage.py createsuperuser

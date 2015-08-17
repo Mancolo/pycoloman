@@ -1,0 +1,359 @@
+- fields: {app_label: admin, model: logentry}
+  model: contenttypes.contenttype
+  pk: 1
+- fields: {app_label: auth, model: permission}
+  model: contenttypes.contenttype
+  pk: 2
+- fields: {app_label: auth, model: group}
+  model: contenttypes.contenttype
+  pk: 3
+- fields: {app_label: auth, model: user}
+  model: contenttypes.contenttype
+  pk: 4
+- fields: {app_label: contenttypes, model: contenttype}
+  model: contenttypes.contenttype
+  pk: 5
+- fields: {app_label: sessions, model: session}
+  model: contenttypes.contenttype
+  pk: 6
+- fields: {app_label: crm, model: historicalcustomer}
+  model: contenttypes.contenttype
+  pk: 7
+- fields: {app_label: crm, model: customer}
+  model: contenttypes.contenttype
+  pk: 8
+- fields: {app_label: crm, model: historicalcustomerkind}
+  model: contenttypes.contenttype
+  pk: 9
+- fields: {app_label: crm, model: customerkind}
+  model: contenttypes.contenttype
+  pk: 10
+- fields: {app_label: crm, model: historicalcontact}
+  model: contenttypes.contenttype
+  pk: 11
+- fields: {app_label: crm, model: contact}
+  model: contenttypes.contenttype
+  pk: 12
+- fields: {app_label: crm, model: site}
+  model: contenttypes.contenttype
+  pk: 13
+- fields: {app_label: crm, model: room}
+  model: contenttypes.contenttype
+  pk: 14
+- fields: {app_label: crm, model: cage}
+  model: contenttypes.contenttype
+  pk: 15
+- fields: {app_label: crm, model: rack}
+  model: contenttypes.contenttype
+  pk: 16
+- fields: {app_label: crm, model: rackposition}
+  model: contenttypes.contenttype
+  pk: 17
+- fields: {expire_date: ! '2015-08-30 06:00:16.896986+00:00', session_data: NGRjNTVmYTJhOGMwM2NkZGI1YzUxZWE2OWU3NDczZjYwMjY3MmY3ZTp7Il9hdXRoX3VzZXJfaGFzaCI6IjNjNGM3MzU5NzI2YzNlMTViMmUzYThjMDQyYmI5OTBhYWM0ZjlhZjkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=}
+  model: sessions.session
+  pk: sjc451gdkre9n9he40t982lleh409305
+- fields: {active: true, address: '', city: '', closed_date: null, kind: null, last_modified: ! '2015-08-15
+      23:18:23+00:00', locked: false, name: Foo Incorporated, notes: '', number: '',
+    phone: '', start_date: null, state: '', zipcode: ''}
+  model: crm.customer
+  pk: 1
+- fields: {active: true, address: '', city: '', closed_date: null, kind: null, last_modified: ! '2015-08-15
+      23:18:23+00:00', locked: false, name: 'Bar, LLC', notes: '', number: '', phone: '',
+    start_date: null, state: '', zipcode: ''}
+  model: crm.customer
+  pk: 2
+- fields: {desc: Telephone Company, label: Telco}
+  model: crm.customerkind
+  pk: 1
+- fields: {desc: Peer Carrier, label: Carrier}
+  model: crm.customerkind
+  pk: 2
+- fields: {desc: Small Medium Enterprise, label: SME}
+  model: crm.customerkind
+  pk: 3
+- fields: {access_phone: true, access_phys: true, company: 1, email: '', first_name: Bob,
+    last_modified: ! '2015-08-17 04:47:08.206459+00:00', last_name: Barker, middle_name: '',
+    notes: Spay and neuter your animals!, phone: '', phone_second: '', role: VP}
+  model: crm.contact
+  pk: 1
+- fields: {access_phone: true, access_phys: true, company: 2, email: '', first_name: Alice,
+    last_modified: ! '2015-08-17 04:49:33.597884+00:00', last_name: Crypto, middle_name: '',
+    notes: Very... cryptic., phone: '', phone_second: '', role: ''}
+  model: crm.contact
+  pk: 2
+- fields: {name: Room A}
+  model: crm.room
+  pk: 1
+- fields: {name: Big Cage, room: 1}
+  model: crm.cage
+  pk: 1
+- fields: {label: CageRack1A, u_height: 42}
+  model: crm.rack
+  pk: 1
+- fields: {label: RoomRackA, u_height: 42}
+  model: crm.rack
+  pk: 2
+- fields: {content_type: 14, object_id: 1, pos_x: 10, pos_y: 20, rack: 2}
+  model: crm.rackposition
+  pk: 1
+- fields: {content_type: 15, object_id: 1, pos_x: 100, pos_y: 200, rack: 1}
+  model: crm.rackposition
+  pk: 2
+- fields: {codename: add_logentry, content_type: 1, name: Can add log entry}
+  model: auth.permission
+  pk: 1
+- fields: {codename: change_logentry, content_type: 1, name: Can change log entry}
+  model: auth.permission
+  pk: 2
+- fields: {codename: delete_logentry, content_type: 1, name: Can delete log entry}
+  model: auth.permission
+  pk: 3
+- fields: {codename: add_permission, content_type: 2, name: Can add permission}
+  model: auth.permission
+  pk: 4
+- fields: {codename: change_permission, content_type: 2, name: Can change permission}
+  model: auth.permission
+  pk: 5
+- fields: {codename: delete_permission, content_type: 2, name: Can delete permission}
+  model: auth.permission
+  pk: 6
+- fields: {codename: add_group, content_type: 3, name: Can add group}
+  model: auth.permission
+  pk: 7
+- fields: {codename: change_group, content_type: 3, name: Can change group}
+  model: auth.permission
+  pk: 8
+- fields: {codename: delete_group, content_type: 3, name: Can delete group}
+  model: auth.permission
+  pk: 9
+- fields: {codename: add_user, content_type: 4, name: Can add user}
+  model: auth.permission
+  pk: 10
+- fields: {codename: change_user, content_type: 4, name: Can change user}
+  model: auth.permission
+  pk: 11
+- fields: {codename: delete_user, content_type: 4, name: Can delete user}
+  model: auth.permission
+  pk: 12
+- fields: {codename: add_contenttype, content_type: 5, name: Can add content type}
+  model: auth.permission
+  pk: 13
+- fields: {codename: change_contenttype, content_type: 5, name: Can change content
+      type}
+  model: auth.permission
+  pk: 14
+- fields: {codename: delete_contenttype, content_type: 5, name: Can delete content
+      type}
+  model: auth.permission
+  pk: 15
+- fields: {codename: add_session, content_type: 6, name: Can add session}
+  model: auth.permission
+  pk: 16
+- fields: {codename: change_session, content_type: 6, name: Can change session}
+  model: auth.permission
+  pk: 17
+- fields: {codename: delete_session, content_type: 6, name: Can delete session}
+  model: auth.permission
+  pk: 18
+- fields: {codename: add_historicalcustomer, content_type: 7, name: Can add historical
+      customer}
+  model: auth.permission
+  pk: 19
+- fields: {codename: change_historicalcustomer, content_type: 7, name: Can change
+      historical customer}
+  model: auth.permission
+  pk: 20
+- fields: {codename: delete_historicalcustomer, content_type: 7, name: Can delete
+      historical customer}
+  model: auth.permission
+  pk: 21
+- fields: {codename: add_customer, content_type: 8, name: Can add customer}
+  model: auth.permission
+  pk: 22
+- fields: {codename: change_customer, content_type: 8, name: Can change customer}
+  model: auth.permission
+  pk: 23
+- fields: {codename: delete_customer, content_type: 8, name: Can delete customer}
+  model: auth.permission
+  pk: 24
+- fields: {codename: add_historicalcustomerkind, content_type: 9, name: Can add historical
+      customer kind}
+  model: auth.permission
+  pk: 25
+- fields: {codename: change_historicalcustomerkind, content_type: 9, name: Can change
+      historical customer kind}
+  model: auth.permission
+  pk: 26
+- fields: {codename: delete_historicalcustomerkind, content_type: 9, name: Can delete
+      historical customer kind}
+  model: auth.permission
+  pk: 27
+- fields: {codename: add_customerkind, content_type: 10, name: Can add customer kind}
+  model: auth.permission
+  pk: 28
+- fields: {codename: change_customerkind, content_type: 10, name: Can change customer
+      kind}
+  model: auth.permission
+  pk: 29
+- fields: {codename: delete_customerkind, content_type: 10, name: Can delete customer
+      kind}
+  model: auth.permission
+  pk: 30
+- fields: {codename: add_historicalcontact, content_type: 11, name: Can add historical
+      contact}
+  model: auth.permission
+  pk: 31
+- fields: {codename: change_historicalcontact, content_type: 11, name: Can change
+      historical contact}
+  model: auth.permission
+  pk: 32
+- fields: {codename: delete_historicalcontact, content_type: 11, name: Can delete
+      historical contact}
+  model: auth.permission
+  pk: 33
+- fields: {codename: add_contact, content_type: 12, name: Can add contact}
+  model: auth.permission
+  pk: 34
+- fields: {codename: change_contact, content_type: 12, name: Can change contact}
+  model: auth.permission
+  pk: 35
+- fields: {codename: delete_contact, content_type: 12, name: Can delete contact}
+  model: auth.permission
+  pk: 36
+- fields: {codename: add_site, content_type: 13, name: Can add site}
+  model: auth.permission
+  pk: 37
+- fields: {codename: change_site, content_type: 13, name: Can change site}
+  model: auth.permission
+  pk: 38
+- fields: {codename: delete_site, content_type: 13, name: Can delete site}
+  model: auth.permission
+  pk: 39
+- fields: {codename: add_room, content_type: 14, name: Can add room}
+  model: auth.permission
+  pk: 40
+- fields: {codename: change_room, content_type: 14, name: Can change room}
+  model: auth.permission
+  pk: 41
+- fields: {codename: delete_room, content_type: 14, name: Can delete room}
+  model: auth.permission
+  pk: 42
+- fields: {codename: add_cage, content_type: 15, name: Can add cage}
+  model: auth.permission
+  pk: 43
+- fields: {codename: change_cage, content_type: 15, name: Can change cage}
+  model: auth.permission
+  pk: 44
+- fields: {codename: delete_cage, content_type: 15, name: Can delete cage}
+  model: auth.permission
+  pk: 45
+- fields: {codename: add_rack, content_type: 16, name: Can add rack}
+  model: auth.permission
+  pk: 46
+- fields: {codename: change_rack, content_type: 16, name: Can change rack}
+  model: auth.permission
+  pk: 47
+- fields: {codename: delete_rack, content_type: 16, name: Can delete rack}
+  model: auth.permission
+  pk: 48
+- fields: {codename: add_rackposition, content_type: 17, name: Can add rack position}
+  model: auth.permission
+  pk: 49
+- fields: {codename: change_rackposition, content_type: 17, name: Can change rack
+      position}
+  model: auth.permission
+  pk: 50
+- fields: {codename: delete_rackposition, content_type: 17, name: Can delete rack
+      position}
+  model: auth.permission
+  pk: 51
+- fields:
+    date_joined: 2015-08-16 05:59:59.401771+00:00
+    email: admin@admin.com
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: true
+    is_superuser: true
+    last_login: 2015-08-16 06:00:16.796331+00:00
+    last_name: ''
+    password: pbkdf2_sha256$20000$IaFLydiII6Xn$TzQKS/roDTWuFsOteAPiBO6S6VLyJP3rrdxIqJL3kA0=
+    user_permissions: []
+    username: admin
+  model: auth.user
+  pk: 1
+- fields: {desc: Telephone Company, history_date: ! '2015-08-17 04:46:07.655116+00:00',
+    history_type: +, history_user: 1, id: 1, label: Telco}
+  model: crm.historicalcustomerkind
+  pk: 1
+- fields: {desc: Peer Carrier, history_date: ! '2015-08-17 04:46:18.302284+00:00',
+    history_type: +, history_user: 1, id: 2, label: Carrier}
+  model: crm.historicalcustomerkind
+  pk: 2
+- fields: {desc: Small Medium Enterprise, history_date: ! '2015-08-17 04:46:32.738510+00:00',
+    history_type: +, history_user: 1, id: 3, label: SME}
+  model: crm.historicalcustomerkind
+  pk: 3
+- fields: {access_phone: true, access_phys: true, company: 1, email: '', first_name: Bob,
+    history_date: ! '2015-08-17 04:47:08.207323+00:00', history_type: +, history_user: 1,
+    id: 1, last_modified: ! '2015-08-17 04:47:08.206459+00:00', last_name: Barker,
+    middle_name: '', notes: Spay and neuter your animals!, phone: '', phone_second: '',
+    role: VP}
+  model: crm.historicalcontact
+  pk: 1
+- fields: {access_phone: true, access_phys: true, company: 2, email: '', first_name: Alice,
+    history_date: ! '2015-08-17 04:49:33.598718+00:00', history_type: +, history_user: 1,
+    id: 2, last_modified: ! '2015-08-17 04:49:33.597884+00:00', last_name: Crypto,
+    middle_name: '', notes: Very... cryptic., phone: '', phone_second: '', role: ''}
+  model: crm.historicalcontact
+  pk: 2
+- fields: {action_flag: 1, action_time: ! '2015-08-16 06:00:37.261812+00:00', change_message: '',
+    content_type: 14, object_id: '1', object_repr: Room A, user: 1}
+  model: admin.logentry
+  pk: 1
+- fields: {action_flag: 2, action_time: ! '2015-08-16 06:00:47.725251+00:00', change_message: No
+      fields changed., content_type: 14, object_id: '1', object_repr: Room A, user: 1}
+  model: admin.logentry
+  pk: 2
+- fields: {action_flag: 1, action_time: ! '2015-08-16 06:01:12.925519+00:00', change_message: '',
+    content_type: 15, object_id: '1', object_repr: Big Cage, user: 1}
+  model: admin.logentry
+  pk: 3
+- fields: {action_flag: 1, action_time: ! '2015-08-16 06:01:33.142886+00:00', change_message: '',
+    content_type: 16, object_id: '1', object_repr: CageRack1A, user: 1}
+  model: admin.logentry
+  pk: 4
+- fields: {action_flag: 1, action_time: ! '2015-08-16 06:01:44.302540+00:00', change_message: '',
+    content_type: 16, object_id: '2', object_repr: RoomRackA, user: 1}
+  model: admin.logentry
+  pk: 5
+- fields: {action_flag: 2, action_time: ! '2015-08-16 06:02:03.411768+00:00', change_message: 'Changed
+      rack for rack position "Big Cage:(100,200)".', content_type: 15, object_id: '1',
+    object_repr: Big Cage, user: 1}
+  model: admin.logentry
+  pk: 6
+- fields: {action_flag: 2, action_time: ! '2015-08-16 06:02:14.661614+00:00', change_message: 'Changed
+      rack for rack position "Room A:(10,20)".', content_type: 14, object_id: '1',
+    object_repr: Room A, user: 1}
+  model: admin.logentry
+  pk: 7
+- fields: {action_flag: 1, action_time: ! '2015-08-17 04:46:07.657591+00:00', change_message: '',
+    content_type: 10, object_id: '1', object_repr: Telco, user: 1}
+  model: admin.logentry
+  pk: 8
+- fields: {action_flag: 1, action_time: ! '2015-08-17 04:46:18.304481+00:00', change_message: '',
+    content_type: 10, object_id: '2', object_repr: Carrier, user: 1}
+  model: admin.logentry
+  pk: 9
+- fields: {action_flag: 1, action_time: ! '2015-08-17 04:46:32.740726+00:00', change_message: '',
+    content_type: 10, object_id: '3', object_repr: SME, user: 1}
+  model: admin.logentry
+  pk: 10
+- fields: {action_flag: 1, action_time: ! '2015-08-17 04:47:08.209932+00:00', change_message: '',
+    content_type: 12, object_id: '1', object_repr: Bob Barker, user: 1}
+  model: admin.logentry
+  pk: 11
+- fields: {action_flag: 1, action_time: ! '2015-08-17 04:49:33.601267+00:00', change_message: '',
+    content_type: 12, object_id: '2', object_repr: Alice Crypto, user: 1}
+  model: admin.logentry
+  pk: 12
